@@ -263,7 +263,8 @@ section{padding:88px 0;position:relative;z-index:2}
   border:1px solid rgba(255,255,255,.22);
   background:rgba(255,255,255,.10);
   color:#fff;backdrop-filter:blur(12px);
-  font-size:11px;font-weight:800;cursor:pointer;transition:.25s ease;
+  font-size:10.5px;font-weight:800;line-height:1.16;cursor:pointer;transition:.25s ease;
+  overflow-wrap:anywhere;
 }
 .value-node:hover,.value-node.active{
   background:rgba(255,255,255,.98);
@@ -702,6 +703,16 @@ footer p{font-size:11px;color:rgba(255,255,255,.62);margin:3px 0}
     padding:20px;
     border-radius:22px;
   }
+  .value-panel > div:last-child{
+    display:grid !important;
+    grid-template-columns:1fr;
+    width:100%;
+  }
+  .value-panel > div:last-child .btn{
+    width:100%;
+    min-width:0;
+    text-align:center;
+  }
   .value-panel h3{
     font-size:25px;
   }
@@ -739,6 +750,62 @@ footer p{font-size:11px;color:rgba(255,255,255,.62);margin:3px 0}
   }
 }
 
+@media (max-width: 380px){
+  .hero{
+    padding:82px 14px 52px;
+  }
+  .hero h1{
+    font-size:34px;
+    line-height:1.02;
+  }
+  section{
+    padding:46px 14px;
+  }
+  .section-title{
+    font-size:29px;
+  }
+  .orbit{
+    min-height:470px;
+  }
+  .orbit:before{
+    width:275px;
+    height:275px;
+  }
+  .center-core{
+    width:136px;
+    height:136px;
+    padding:14px;
+  }
+  .center-core strong{
+    font-size:16px;
+  }
+  .value-node{
+    width:64px;
+    height:64px;
+    padding:5px;
+    font-size:7.4px;
+    line-height:1.16;
+  }
+  .timeline-card,
+  .value-panel,
+  .eval-card,
+  .final-cta{
+    padding:17px;
+  }
+  .criterion{
+    gap:8px;
+    padding:11px;
+  }
+  .criterion span:first-child{
+    min-width:0;
+    overflow-wrap:anywhere;
+  }
+  .btn{
+    max-width:100%;
+    padding:12px 15px;
+  }
+}
+
 /* Avoid button text overflow on narrow screens */
 .btn{
   white-space:normal;
@@ -765,9 +832,8 @@ footer p{font-size:11px;color:rgba(255,255,255,.62);margin:3px 0}
     <div class="eyebrow">ZAN 2026 · Corporate Values Awards</div>
     <h1>Celebrate the people<br><span class="gold">who bring our values to life.</span></h1>
     <p>
-      Inspired by this year’s ZAN 2026 key visual, this microsite brings the same
-      premium blue-and-gold stage mood into the 7 Corporate Values Awards experience.
-      Recognise ZUS Peeps whose actions, contribution and impact truly reflect our culture.
+      Recognise ZUS Peeps whose actions, contributions and impact bring our
+      7 Corporate Values to life and strengthen the culture we build together.
     </p>
     <div class="hero-actions">
       <a class="btn btn-primary" href="https://zuscoffee.sg.larksuite.com/share/base/form/shrlgmUnb3TKTrr76ntXk0yLZGc" target="_blank">⭐ Nominate Someone</a>
@@ -776,7 +842,7 @@ footer p{font-size:11px;color:rgba(255,255,255,.62);margin:3px 0}
     </div>
     <div class="hero-note">
       <div class="mini-stat"><strong>7 Awards</strong><span>1 Winner Per Value</span></div>
-      <div class="mini-stat"><strong>14–25 Sep</strong><span>Nomination Window</span></div>
+      <div class="mini-stat"><strong>15–25 Sep</strong><span>Nomination Window</span></div>
       <div class="mini-stat"><strong>21 Oct</strong><span>Winner Announcement</span></div>
     </div>
   </div>
@@ -792,8 +858,8 @@ footer p{font-size:11px;color:rgba(255,255,255,.62);margin:3px 0}
         <div class="phase current">
           <div class="phase-label">PHASE 1</div>
           <h3>Nomination</h3>
-          <div class="date">14–25 September 2026</div>
-          <p>All eligible employees submit nominations.</p>
+          <div class="date">15–25 September 2026</div>
+          <p>All full-time ZUS employees may submit nominations.</p>
         </div>
         <div class="phase">
           <div class="phase-label">PHASE 2</div>
@@ -805,13 +871,13 @@ footer p{font-size:11px;color:rgba(255,255,255,.62);margin:3px 0}
           <div class="phase-label">PHASE 3</div>
           <h3>Top Management Evaluation</h3>
           <div class="date">06–17 October 2026</div>
-          <p>Executive Leadership evaluates the Top 3 nominees for each value.</p>
+          <p>Top Management evaluates the Top 3 nominees for each Corporate Value.</p>
         </div>
         <div class="phase">
           <div class="phase-label">ZAN NIGHT</div>
           <h3>Winner Announcement</h3>
           <div class="date">21 October 2026</div>
-          <p>One winner for each Corporate Value will be announced.</p>
+          <p>Winners will be announced during ZAN Night.</p>
         </div>
       </div>
     </div>
@@ -836,21 +902,21 @@ footer p{font-size:11px;color:rgba(255,255,255,.62);margin:3px 0}
           </div>
         </div>
 
-        <button class="value-node active" data-index="0">Never Full<br>Always Hungry</button>
+        <button class="value-node active" data-index="0">We Break Walls<br>No Excuses</button>
         <button class="value-node" data-index="1">Every Customer<br>Counts</button>
-        <button class="value-node" data-index="2">Champions Fuel<br>Champions</button>
+        <button class="value-node" data-index="2">Own It, Every<br>Success,<br>Every Failure</button>
         <button class="value-node" data-index="3">Work Smarter<br>Hit Harder</button>
-        <button class="value-node" data-index="4">Own It -<br>Every Success<br>Every Failure</button>
-        <button class="value-node" data-index="5">We Break Walls<br>No Excuses</button>
-        <button class="value-node" data-index="6">From Us To<br>The Universe</button>
+        <button class="value-node" data-index="4">Never Full,<br>Always Hungry</button>
+        <button class="value-node" data-index="5">From Us to<br>the Universe</button>
+        <button class="value-node" data-index="6">Champions Fuel<br>Champions</button>
       </div>
 
       <div class="glass-card value-panel">
         <div>
           <div class="value-number" id="valueNumber">VALUE 01</div>
-          <h3 id="valueTitle">Never Full Always Hungry Award</h3>
+          <h3 id="valueTitle">We Break Walls, No Excuses Award</h3>
           <p id="valueText">
-            Nominate someone who strongly demonstrates this Corporate Value through meaningful contribution, clear impact and real examples.
+            We serve the same mission, constantly inspired to break the mould and stretch the limits.
           </p>
 
           <div class="value-meta">
@@ -860,7 +926,7 @@ footer p{font-size:11px;color:rgba(255,255,255,.62);margin:3px 0}
             </div>
             <div class="meta-box">
               <small>Who can nominate</small>
-              <strong>All</strong>
+              <strong>Full-time ZUS employees</strong>
             </div>
             <div class="meta-box">
               <small>Minimum service</small>
@@ -923,25 +989,25 @@ footer p{font-size:11px;color:rgba(255,255,255,.62);margin:3px 0}
 
     <div class="evaluation-grid">
       <div class="eval-card">
-        <h3>Phase 1 · Nomination Assessment</h3>
+        <h3>First Evaluation</h3>
         <p>The Evaluation Committee reviews all nominations and shortlists the Top 3 nominees for each Corporate Value.</p>
         <div class="criteria">
-          <div class="criterion"><span>Meet ONE of ZUS COFFEE 7 Corporate Values</span><span class="tick">✓</span></div>
+          <div class="criterion"><span>Demonstration of the relevant Corporate Value</span><span class="tick">✓</span></div>
           <div class="criterion"><span>Quality of justification</span><span class="tick">✓</span></div>
-          <div class="criterion"><span>Demonstrated impact</span><span class="tick">✓</span></div>
-          <div class="criterion"><span>Evidence/examples provided</span><span class="tick">✓</span></div>
+          <div class="criterion"><span>Impact created</span><span class="tick">✓</span></div>
+          <div class="criterion"><span>Supporting evidence and examples</span><span class="tick">✓</span></div>
           <div class="criterion"><span>Cross-functional contribution (if applicable)</span><span class="tick">✓</span></div>
         </div>
       </div>
 
       <div class="eval-card">
-        <h3>Phase 2 · Top Management Evaluation</h3>
-        <p>Executive Leadership reviews the Top 3 candidates’ profiles from each Corporate Value.</p>
+        <h3>Top Management Evaluation</h3>
+        <p>Top Management reviews the Top 3 nominees for each Corporate Value.</p>
         <div class="criteria">
-          <div class="criterion"><span>Demonstration of Relevant Core Values</span><span class="tick">✓</span></div>
-          <div class="criterion"><span>Achievement & Contribution</span><span class="tick">✓</span></div>
-          <div class="criterion"><span>Impact Created</span><span class="tick">✓</span></div>
-          <div class="criterion"><span>Leadership & Influence</span><span class="tick">✓</span></div>
+          <div class="criterion"><span>Demonstration of the relevant Corporate Value</span><span class="tick">✓</span></div>
+          <div class="criterion"><span>Achievement and contribution</span><span class="tick">✓</span></div>
+          <div class="criterion"><span>Impact created</span><span class="tick">✓</span></div>
+          <div class="criterion"><span>Leadership and influence</span><span class="tick">✓</span></div>
         </div>
       </div>
     </div>
@@ -952,7 +1018,7 @@ footer p{font-size:11px;color:rgba(255,255,255,.62);margin:3px 0}
   <div class="container">
     <div class="final-cta">
       <div>
-        <div class="section-kicker">Nomination Opens 14 September 2026</div>
+        <div class="section-kicker">Nomination Opens 15 September 2026</div>
         <h2>Know someone who lives the values?</h2>
         <p>
           Nomination closes on 25 September 2026. Submit through the official Corporate Values Award nomination form.
@@ -971,7 +1037,7 @@ footer p{font-size:11px;color:rgba(255,255,255,.62);margin:3px 0}
       <p>Recognising the behaviours that shape ZUS culture.</p>
     </div>
     <div>
-      <p>Nomination · 14–25 September 2026</p>
+      <p>Nomination · 15–25 September 2026</p>
       <p>ZAN Night · 21 October 2026</p>
     </div>
   </div>
@@ -979,19 +1045,41 @@ footer p{font-size:11px;color:rgba(255,255,255,.62);margin:3px 0}
 
 <script>
 const values = [
-  "Never Full Always Hungry Award",
-  "Every Customer Counts Award",
-  "Champions Fuel Champions Award",
-  "Work Smarter Hit Harder Award",
-  "Own It - Every Success Every Failure Award",
-  "We Break Walls No Excuses Award",
-  "From Us To The Universe Award"
+  {
+    title: "We Break Walls, No Excuses Award",
+    description: "We serve the same mission, constantly inspired to break the mould and stretch the limits."
+  },
+  {
+    title: "Every Customer Counts Award",
+    description: "We treasure every single feedback from our Customers above everything else."
+  },
+  {
+    title: "Own It, Every Success, Every Failure Award",
+    description: "We take full ownership and are proactive in delivering above and beyond."
+  },
+  {
+    title: "Work Smarter, Hit Harder Award",
+    description: "We cut the fat, leave the muscle—innovation is our weapon."
+  },
+  {
+    title: "Never Full, Always Hungry Award",
+    description: "We don't settle for the status quo, always eager for more."
+  },
+  {
+    title: "From Us to the Universe Award",
+    description: "We think big, act local to reach global in order to build a brand we can be proud of."
+  },
+  {
+    title: "Champions Fuel Champions Award",
+    description: "We don't just grow talent—we build legends."
+  }
 ];
 
 const nodes = document.querySelectorAll(".value-node");
 const orbit = document.querySelector(".orbit");
 const title = document.getElementById("valueTitle");
 const number = document.getElementById("valueNumber");
+const valueText = document.getElementById("valueText");
 
 
 let orbitPause = false;
@@ -1000,13 +1088,14 @@ let orbitStart = performance.now();
 
 function getOrbitMetrics(){
   const rect = orbit.getBoundingClientRect();
-  const nodeSize = window.innerWidth <= 600 ? 66 : (window.innerWidth <= 900 ? 78 : 88);
+  const narrowMobile = window.innerWidth <= 380;
+  const nodeSize = narrowMobile ? 64 : (window.innerWidth <= 600 ? 66 : (window.innerWidth <= 900 ? 78 : 88));
   const mobile = window.innerWidth <= 600;
   return {
     rect,
     nodeSize,
-    radiusX: Math.max(mobile ? 108 : 120, (rect.width - nodeSize) * (mobile ? 0.37 : 0.40)),
-    radiusY: Math.max(mobile ? 145 : 150, (rect.height - nodeSize) * (mobile ? 0.37 : 0.40)),
+    radiusX: Math.max(narrowMobile ? 102 : (mobile ? 108 : 120), (rect.width - nodeSize) * (narrowMobile ? 0.35 : (mobile ? 0.37 : 0.40))),
+    radiusY: Math.max(narrowMobile ? 132 : (mobile ? 145 : 150), (rect.height - nodeSize) * (narrowMobile ? 0.34 : (mobile ? 0.37 : 0.40))),
     centerX: rect.width / 2,
     centerY: rect.height / 2
   };
@@ -1047,7 +1136,8 @@ nodes.forEach((node, i) => {
     nodes.forEach(n => n.classList.remove("active"));
     node.classList.add("active");
     number.textContent = "VALUE " + String(i + 1).padStart(2, "0");
-    title.textContent = values[i];
+    title.textContent = values[i].title;
+    valueText.textContent = values[i].description;
   });
 });
 
