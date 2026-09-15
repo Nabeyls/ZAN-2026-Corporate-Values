@@ -329,6 +329,52 @@ section{padding:88px 0;position:relative;z-index:2}
 }
 .tick{color:#ffe4aa;font-weight:900}
 
+/* Eligibility & submission */
+.eligibility-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+  gap:16px;
+  margin-top:30px;
+}
+.eligibility-card{
+  min-height:190px;
+  padding:24px;
+  border-radius:24px;
+  background:linear-gradient(180deg, rgba(255,255,255,.11), rgba(255,255,255,.05));
+  border:1px solid rgba(255,255,255,.14);
+  box-shadow:var(--shadow);
+}
+.eligibility-card small{
+  display:block;
+  color:var(--gold-soft);
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+.eligibility-card h3{
+  margin:10px 0 8px;
+  color:#fff;
+  font-size:17px;
+  line-height:1.35;
+}
+.eligibility-card p{
+  margin:0;
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.6;
+}
+.evaluation-note{
+  margin-top:14px;
+  padding:13px 14px;
+  border-left:3px solid var(--gold);
+  border-radius:10px;
+  background:rgba(215,176,106,.10);
+  color:#fff3d2;
+  font-size:12px;
+  line-height:1.55;
+}
+
 /* CTA */
 .final-cta{
   padding:38px;border-radius:28px;
@@ -609,6 +655,9 @@ footer p{font-size:11px;color:rgba(255,255,255,.62);margin:3px 0}
   .evaluation-grid{
     grid-template-columns:1fr;
   }
+  .eligibility-grid{
+    grid-template-columns:1fr 1fr;
+  }
   .final-cta{
     flex-direction:column;
     align-items:flex-start;
@@ -732,6 +781,14 @@ footer p{font-size:11px;color:rgba(255,255,255,.62);margin:3px 0}
   .eval-card{
     padding:20px;
   }
+  .eligibility-grid{
+    grid-template-columns:1fr;
+    gap:12px;
+  }
+  .eligibility-card{
+    min-height:0;
+    padding:20px;
+  }
   .criterion{
     align-items:flex-start;
     font-size:11px;
@@ -824,6 +881,7 @@ footer p{font-size:11px;color:rgba(255,255,255,.62);margin:3px 0}
     <a href="#values">7 Values</a>
     <a href="#nominate">How to Nominate</a>
     <a href="#evaluation">Evaluation</a>
+    <a href="#eligibility">Eligibility</a>
   </div>
 </nav>
 
@@ -930,7 +988,7 @@ footer p{font-size:11px;color:rgba(255,255,255,.62);margin:3px 0}
             </div>
             <div class="meta-box">
               <small>Minimum service</small>
-              <strong>At least 12 months</strong>
+              <strong>More than 12 months</strong>
             </div>
             <div class="meta-box">
               <small>Requirement</small>
@@ -939,7 +997,7 @@ footer p{font-size:11px;color:rgba(255,255,255,.62);margin:3px 0}
           </div>
 
           <div class="value-tip">
-            Supporting evidence is required. Make your nomination clear, specific and backed by real examples.
+            A clear and specific justification is required. Supporting evidence and examples are optional but may strengthen the nomination.
           </div>
         </div>
 
@@ -971,12 +1029,12 @@ footer p{font-size:11px;color:rgba(255,255,255,.62);margin:3px 0}
       <div class="step">
         <div class="step-no">02</div>
         <h3>Tell the Story</h3>
-        <p>Explain what happened and why the nominee deserves to be recognised.</p>
+        <p>A clear justification is required. Explain what happened and why the nominee deserves to be recognised.</p>
       </div>
       <div class="step">
         <div class="step-no">03</div>
-        <h3>Show the Evidence</h3>
-        <p>Provide examples or supporting evidence that demonstrate the impact created.</p>
+        <h3>Add Supporting Material</h3>
+        <p>Supporting evidence is optional. You may include examples, photos, documents or a video to strengthen the nomination.</p>
       </div>
     </div>
   </div>
@@ -995,9 +1053,10 @@ footer p{font-size:11px;color:rgba(255,255,255,.62);margin:3px 0}
           <div class="criterion"><span>Demonstration of the relevant Corporate Value</span><span class="tick">✓</span></div>
           <div class="criterion"><span>Quality of justification</span><span class="tick">✓</span></div>
           <div class="criterion"><span>Impact created</span><span class="tick">✓</span></div>
-          <div class="criterion"><span>Supporting evidence and examples</span><span class="tick">✓</span></div>
-          <div class="criterion"><span>Cross-functional contribution (if applicable)</span><span class="tick">✓</span></div>
+          <div class="criterion"><span>Supporting evidence and examples (optional)</span><span class="tick">＋</span></div>
+          <div class="criterion"><span>Cross-functional Contribution (if applicable)</span><span class="tick">＋</span></div>
         </div>
+        <div class="evaluation-note">Cross-functional Contribution (if applicable) is an additional consideration and is not mandatory.</div>
       </div>
 
       <div class="eval-card">
@@ -1009,6 +1068,44 @@ footer p{font-size:11px;color:rgba(255,255,255,.62);margin:3px 0}
           <div class="criterion"><span>Impact created</span><span class="tick">✓</span></div>
           <div class="criterion"><span>Leadership and influence</span><span class="tick">✓</span></div>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="eligibility" class="section-dark">
+  <div class="container">
+    <div class="section-kicker">05 · Eligibility &amp; Submission</div>
+    <h2 class="section-title">Before the nomination is submitted</h2>
+    <p class="section-intro">
+      Check the nominee’s eligibility and prepare a clear justification before completing the nomination form.
+    </p>
+
+    <div class="eligibility-grid">
+      <div class="eligibility-card">
+        <small>Employment</small>
+        <h3>Full-time ZUS employee</h3>
+        <p>Nominations may be submitted for eligible full-time ZUS employees.</p>
+      </div>
+      <div class="eligibility-card">
+        <small>Service</small>
+        <h3>More than 12 months with ZUS</h3>
+        <p>The nominee must meet the minimum service requirement.</p>
+      </div>
+      <div class="eligibility-card">
+        <small>IR Record</small>
+        <h3>Good disciplinary standing</h3>
+        <p>The nominee must have no active or past Industrial Relations (IR) cases.</p>
+      </div>
+      <div class="eligibility-card">
+        <small>Justification</small>
+        <h3>Required</h3>
+        <p>Explain clearly how the nominee demonstrates the selected Corporate Value and the impact created.</p>
+      </div>
+      <div class="eligibility-card">
+        <small>Supporting Material</small>
+        <h3>Optional</h3>
+        <p>Examples, photos, documents, results or a supporting video may be included to strengthen the nomination.</p>
       </div>
     </div>
   </div>
